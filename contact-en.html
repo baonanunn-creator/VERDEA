@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking & Contact | VERDÉA HOTEL</title>
+<meta name="description" content="Book direct or contact VERDÉA HOTEL at 215A Nguyen Van Huong Street, Thao Dien Ward, Ho Chi Minh City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index-en.html" class="logo">VERDÉA<span>HOTEL &middot; SAIGON</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="about-en.html">Concept</a></li>
+          <li><a href="rooms-en.html">Rooms & Suites</a></li>
+          <li><a href="dining-en.html">Dining</a></li>
+          <li><a href="wellness-en.html">Wellness</a></li>
+          <li><a href="events-en.html">Events</a></li>
+          <li><a href="contact-en.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact-en.html" class="btn btn-primary">Book Now</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="hero hero--short" style="background-image:url('assets/img/hero-contact.jpg');">
+    <div class="container hero-inner">
+      <span class="hero-tag">Booking &amp; Contact</span>
+      <h1>Begin Your Journey<br>With VERDÉA</h1>
+      <p>Fill in the form below to hold your reservation, or reach our front desk team directly.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1.3fr 1fr;gap:60px;align-items:flex-start;">
+        <div class="form-card">
+          <span class="eyebrow">Booking</span>
+          <h2 style="margin-bottom:26px;">Room Reservation Request</h2>
+          <form id="booking-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="checkin">Check-in Date</label>
+                <input type="date" id="checkin" name="checkin" required>
+              </div>
+              <div class="field">
+                <label for="checkout">Check-out Date</label>
+                <input type="date" id="checkout" name="checkout" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="room-type">Room Category</label>
+                <select id="room-type" name="room-type">
+                  <option>Standard Room</option>
+                  <option>Deluxe Room</option>
+                  <option>Premier Room</option>
+                  <option>Suite</option>
+                  <option>Suite Pool</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="guests">Number of Guests</label>
+                <select id="guests" name="guests">
+                  <option>1 guest</option>
+                  <option>2 guests</option>
+                  <option>3 guests</option>
+                  <option>4+ guests</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="John Smith" required>
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+84 9xx xxx xxx" required>
+              </div>
+            </div>
+            <div class="field" style="margin-bottom:22px;">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@email.com" required>
+            </div>
+            <div class="field" style="margin-bottom:8px;">
+              <label for="note">Special Requests (optional)</label>
+              <textarea id="note" name="note" placeholder="E.g. high floor, extra bed, food allergies..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top:18px;width:100%;justify-content:center;">Send Booking Request</button>
+            <p class="form-note" id="form-success" style="display:none;color:var(--gold-600);">Thank you! This is a demo form - the VERDÉA team will follow up to confirm via the phone number or email you provided.</p>
+            <p class="form-note">This is a demo form for interface presentation purposes and is not yet connected to a live booking system.</p>
+          </form>
+        </div>
+
+        <div>
+          <span class="eyebrow">Contact Information</span>
+          <h2 style="margin-bottom:30px;">VERDÉA HOTEL</h2>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="ic">&#9679;</span>
+              <div>
+                <h4>Address</h4>
+                <p>215A Nguyen Van Huong Street, Thao Dien Ward,<br>Ho Chi Minh City, Vietnam</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="ic">&#9742;</span>
+              <div>
+                <h4>Phone</h4>
+                <p><a href="tel:+842838225588">(+84) 28 3822 5588</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="ic">&#9993;</span>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:reservations@verdeahotel.vn">reservations@verdeahotel.vn</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="ic">&#128337;</span>
+              <div>
+                <h4>Check-in / Check-out</h4>
+                <p>Check-in: 2:00 PM &middot; Check-out: 12:00 PM</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:36px;">
+            <iframe class="map-frame" loading="lazy"
+              src="https://maps.google.com/maps?q=215A%20Nguyen%20Van%20Huong%2C%20Thao%20Dien%2C%20Ho%20Chi%20Minh%20City&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center;">Frequently Asked Questions</span>
+        <h2>A Few Things Worth Knowing</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="tile">
+          <h3>Cancellation Policy</h3>
+          <p>Free cancellation up to 48 hours before check-in. A one-night charge applies for cancellations made after this window.</p>
+        </div>
+        <div class="tile">
+          <h3>Pets</h3>
+          <p>VERDÉA does not currently accommodate pets, with the exception of trained service animals assisting guests with disabilities.</p>
+        </div>
+        <div class="tile">
+          <h3>Airport Transfers</h3>
+          <p>Transfer service to and from Tan Son Nhat Airport is available on request; please contact us at least 24 hours in advance.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index-en.html" class="logo">VERDÉA<span>HOTEL &middot; SAIGON</span></a>
+          <p>A sanctuary within nature - a verdant oasis at the heart of the city, where architecture and greenery tell a slow, considered story together.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="TikTok">tt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="about-en.html">Concept &amp; Design</a></li>
+            <li><a href="rooms-en.html">Rooms &amp; Suites</a></li>
+            <li><a href="dining-en.html">Dining</a></li>
+            <li><a href="wellness-en.html">Wellness</a></li>
+            <li><a href="events-en.html">Events</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="contact-en.html">Book a Room</a></li>
+            <li><a href="contact-en.html">Contact Us</a></li>
+            <li><a href="#">Booking Policy</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="#">215A Nguyen Van Huong Street,<br>Thao Dien Ward, Ho Chi Minh City</a></li>
+            <li><a href="tel:+842838225588">(+84) 28 3822 5588</a></li>
+            <li><a href="mailto:reservations@verdeahotel.vn">reservations@verdeahotel.vn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDÉA HOTEL. All rights reserved.</p>
+        <p><a href="#">Terms of Use</a> &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+
+  <div class="lang-toggle">
+    <a href="contact.html">VN | EN</a>
+  </div>
+
+</body>
+</html>

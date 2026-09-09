@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đặt phòng & Liên hệ | VERDÉA HOTEL</title>
+<meta name="description" content="Đặt phòng trực tiếp hoặc liên hệ với VERDÉA HOTEL tại 215A Nguyễn Văn Hưởng, Phường Thảo Điền, TP. Hồ Chí Minh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">VERDÉA<span>HOTEL &middot; SÀI GÒN</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Concept</a></li>
+          <li><a href="rooms.html">Phòng & Suite</a></li>
+          <li><a href="dining.html">Ẩm thực</a></li>
+          <li><a href="wellness.html">Wellness</a></li>
+          <li><a href="events.html">Sự kiện</a></li>
+          <li><a href="contact.html" class="active">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Đặt phòng</a>
+      </div>
+      <button class="nav-toggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+
+  <section class="hero hero--short" style="background-image:url('assets/img/hero-contact.jpg');">
+    <div class="container hero-inner">
+      <span class="hero-tag">Đặt phòng &amp; Liên hệ</span>
+      <h1>Bắt đầu hành trình<br>cùng VERDÉA</h1>
+      <p>Điền thông tin bên dưới để giữ chỗ, hoặc liên hệ trực tiếp với đội ngũ lễ tân của chúng tôi.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid" style="grid-template-columns:1.3fr 1fr;gap:60px;align-items:flex-start;">
+        <div class="form-card">
+          <span class="eyebrow">Đặt phòng</span>
+          <h2 style="margin-bottom:26px;">Yêu cầu đặt phòng</h2>
+          <form id="booking-form">
+            <div class="form-row">
+              <div class="field">
+                <label for="checkin">Ngày nhận phòng</label>
+                <input type="date" id="checkin" name="checkin" required>
+              </div>
+              <div class="field">
+                <label for="checkout">Ngày trả phòng</label>
+                <input type="date" id="checkout" name="checkout" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="room-type">Hạng phòng</label>
+                <select id="room-type" name="room-type">
+                  <option>Standard Room</option>
+                  <option>Deluxe Room</option>
+                  <option>Premier Room</option>
+                  <option>Suite</option>
+                  <option>Suite Pool</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="guests">Số lượng khách</label>
+                <select id="guests" name="guests">
+                  <option>1 khách</option>
+                  <option>2 khách</option>
+                  <option>3 khách</option>
+                  <option>4 khách trở lên</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="field">
+                <label for="fullname">Họ và tên</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Nguyễn Văn A" required>
+              </div>
+              <div class="field">
+                <label for="phone">Số điện thoại</label>
+                <input type="tel" id="phone" name="phone" placeholder="09xx xxx xxx" required>
+              </div>
+            </div>
+            <div class="field" style="margin-bottom:22px;">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="ban@email.com" required>
+            </div>
+            <div class="field" style="margin-bottom:8px;">
+              <label for="note">Yêu cầu đặc biệt (nếu có)</label>
+              <textarea id="note" name="note" placeholder="Ví dụ: phòng tầng cao, giường phụ, dị ứng thực phẩm..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="margin-top:18px;width:100%;justify-content:center;">Gửi yêu cầu đặt phòng</button>
+            <p class="form-note" id="form-success" style="display:none;color:var(--gold-600);">Cảm ơn bạn! Đây là biểu mẫu minh họa - đội ngũ VERDÉA sẽ liên hệ xác nhận qua số điện thoại hoặc email bạn cung cấp.</p>
+            <p class="form-note">Đây là biểu mẫu demo cho mục đích trình bày giao diện, chưa kết nối hệ thống đặt phòng thực tế.</p>
+          </form>
+        </div>
+
+        <div>
+          <span class="eyebrow">Thông tin liên hệ</span>
+          <h2 style="margin-bottom:30px;">VERDÉA HOTEL</h2>
+          <div class="info-list">
+            <div class="info-item">
+              <span class="ic">&#9679;</span>
+              <div>
+                <h4>Địa chỉ</h4>
+                <p>215A Nguyễn Văn Hưởng, Phường Thảo Điền,<br>TP. Hồ Chí Minh, Việt Nam</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="ic">&#9742;</span>
+              <div>
+                <h4>Điện thoại</h4>
+                <p><a href="tel:+842838225588">(+84) 28 3822 5588</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="ic">&#9993;</span>
+              <div>
+                <h4>Email</h4>
+                <p><a href="mailto:reservations@verdeahotel.vn">reservations@verdeahotel.vn</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <span class="ic">&#128337;</span>
+              <div>
+                <h4>Giờ nhận / trả phòng</h4>
+                <p>Nhận phòng: 14:00 &middot; Trả phòng: 12:00</p>
+              </div>
+            </div>
+          </div>
+
+          <div style="margin-top:36px;">
+            <iframe class="map-frame" loading="lazy"
+              src="https://maps.google.com/maps?q=215A%20Nguyen%20Van%20Huong%2C%20Thao%20Dien%2C%20Ho%20Chi%20Minh%20City&t=&z=15&ie=UTF8&iwloc=&output=embed">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center;">Câu hỏi thường gặp</span>
+        <h2>Một vài điều bạn nên biết</h2>
+      </div>
+      <div class="grid grid-3">
+        <div class="tile">
+          <h3>Chính sách hủy phòng</h3>
+          <p>Miễn phí hủy phòng trước 48 giờ so với ngày nhận phòng. Sau thời gian này sẽ áp dụng phí tương đương một đêm lưu trú.</p>
+        </div>
+        <div class="tile">
+          <h3>Thú cưng</h3>
+          <p>VERDÉA hiện chưa hỗ trợ khách lưu trú mang theo thú cưng, ngoại trừ chó dẫn đường hỗ trợ người khuyết tật.</p>
+        </div>
+        <div class="tile">
+          <h3>Đưa đón sân bay</h3>
+          <p>Dịch vụ đưa đón sân bay Tân Sơn Nhất có sẵn theo yêu cầu, vui lòng liên hệ trước ít nhất 24 giờ.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">VERDÉA<span>HOTEL &middot; SÀI GÒN</span></a>
+          <p>Một chốn bình yên giữa thiên nhiên - ốc đảo xanh mát giữa lòng đô thị, nơi kiến trúc và cây xanh cùng kể một câu chuyện chậm rãi, tinh tế.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="TikTok">tt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Khám phá</h5>
+          <ul>
+            <li><a href="about.html">Concept &amp; thiết kế</a></li>
+            <li><a href="rooms.html">Phòng &amp; Suite</a></li>
+            <li><a href="dining.html">Ẩm thực</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="events.html">Sự kiện</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Hỗ trợ</h5>
+          <ul>
+            <li><a href="contact.html">Đặt phòng</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="#">Chính sách đặt phòng</a></li>
+            <li><a href="#">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Liên hệ</h5>
+          <ul>
+            <li><a href="#">215A Nguyễn Văn Hưởng,<br>Phường Thảo Điền, TP. Hồ Chí Minh</a></li>
+            <li><a href="tel:+842838225588">(+84) 28 3822 5588</a></li>
+            <li><a href="mailto:reservations@verdeahotel.vn">reservations@verdeahotel.vn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDÉA HOTEL. Bảo lưu mọi quyền.</p>
+        <p><a href="#">Điều khoản sử dụng</a> &nbsp;&middot;&nbsp; <a href="#">Chính sách riêng tư</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/main.js"></script>
+
+  <div class="lang-toggle">
+    <a href="contact-en.html">EN | VN</a>
+  </div>
+
+</body>
+</html>
