@@ -246,7 +246,7 @@ h1,h2,h3,h4{
   text-transform:uppercase;
   color:var(--gold-400);
   margin-bottom:20px;
-  display:block;
+  display:none;
 }
 .hero h1{
   color:var(--ivory-100);
