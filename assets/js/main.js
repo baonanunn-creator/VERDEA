@@ -61,12 +61,25 @@ document.addEventListener('DOMContentLoaded', function () {
 
       '<svg viewBox="0 0 24 24" aria-hidden="true" width="18" height="18" fill="currentColor"><path d="M15 3h3c.3 2 1.5 3.5 3.5 4v3.1c-1.3-.1-2.5-.5-3.5-1.1V16c0 3.3-2.7 6-6 6s-6-2.4-6-5.7c0-3.4 2.7-6.1 6.2-6.1.3 0 .6 0 .8.1v3.3c-.3-.1-.6-.2-.9-.2-1.4 0-2.5 1-2.5 2.4s1.1 2.4 2.5 2.4 2.4-1 2.4-2.5V3z"></path></svg>'
     ];
+    
+    var socialLinks = [
+  'https://www.facebook.com/profile.php?id=61593648383005',
+  '#',
+  '#'
+];
 
     group.querySelectorAll('a').forEach(function (link, index) {
       if (icons[index]) {
-        link.textContent = '';
-        link.insertAdjacentHTML('beforeend', icons[index]);
-      }
+  link.textContent = '';
+  link.href = socialLinks[index];
+
+  if (index === 0) {
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+  }
+
+  link.insertAdjacentHTML('beforeend', icons[index]);
+}
     });
   });
 });
