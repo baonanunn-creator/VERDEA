@@ -254,6 +254,9 @@ h1,h2,h3,h4{
   font-weight:600;
   margin-bottom:18px;
 }
+.hero h1 span{
+  white-space: nowrap;
+}
 .hero p{
   font-size:17px;
   color:var(--ivory-300);
