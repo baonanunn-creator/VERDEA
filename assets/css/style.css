@@ -90,6 +90,12 @@ h1,h2,h3,h4{
   height:1px;
   background:var(--gold-600);
 }
+.eyebrow::after{
+  content:"";
+  width:28px;
+  height:1px;
+  background:var(--gold-600);
+}
 
 .section{padding:110px 0;}
 .section--tight{padding:80px 0;}
