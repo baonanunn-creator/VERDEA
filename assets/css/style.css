@@ -967,3 +967,16 @@ h1,h2,h3,h4{
   }
 
 }
+/* ============================================================
+   VERDÉA — CONCEPT HERO TITLE
+   Keep "Câu chuyện phía sau" on one line
+   ============================================================ */
+
+.hero--short h1 span {
+  white-space: nowrap !important;
+}
+
+/* Make sure the first line has enough space on desktop */
+.hero--short h1 {
+  max-width: 1000px;
+}
