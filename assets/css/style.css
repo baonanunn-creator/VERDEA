@@ -636,3 +636,7 @@ h1,h2,h3,h4{
   .nav-links{width:88%;}
   .stats{grid-template-columns:1fr 1fr;gap:20px 16px;}
 }
+/* Ẩn dòng chữ vàng (tag/eyebrow) trên tất cả các đề mục */
+.hero-tag, .eyebrow {
+    display: none !important;
+}
