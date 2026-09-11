@@ -807,19 +807,18 @@ h1,h2,h3,h4{
 }
 /* ============================================================
    VERDÉA — CONCEPT PAGE DESIGN PRINCIPLES
+   Used by: about.html + about-en.html
    Layout: 2 / 2 / 1
+   Compact centered layout
    ============================================================ */
 
 .concept-principles-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
+  max-width: 760px;
+  margin: 0 auto;
 }
-
-
-/* ============================================================
-   IMAGE CARD
-   ============================================================ */
 
 .concept-principle-card {
   position: relative;
@@ -827,11 +826,6 @@ h1,h2,h3,h4{
   overflow: hidden;
   background: var(--forest-900);
 }
-
-
-/* ============================================================
-   IMAGE
-   ============================================================ */
 
 .concept-principle-card img {
   width: 100%;
@@ -841,19 +835,9 @@ h1,h2,h3,h4{
   transition: transform 0.6s ease;
 }
 
-
-/* ============================================================
-   HOVER
-   ============================================================ */
-
 .concept-principle-card:hover img {
   transform: scale(1.04);
 }
-
-
-/* ============================================================
-   LIGHT BLACK OVERLAY
-   ============================================================ */
 
 .concept-principle-card::after {
   content: "";
@@ -863,51 +847,33 @@ h1,h2,h3,h4{
   pointer-events: none;
 }
 
-
-/* ============================================================
-   TEXT ON IMAGE
-   ============================================================ */
-
 .concept-principle-overlay {
   position: absolute;
-  left: 24px;
-  right: 24px;
-  bottom: 22px;
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
   z-index: 2;
 }
-
-
-/* Number + description */
 
 .concept-principle-number {
   display: block;
   margin: 0 0 7px 0;
   padding: 0;
   color: var(--gold-400);
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1.3;
   letter-spacing: 0.04em;
-  font-weight: 400;
+  font-weight: 500;
 }
-
-
-/* Main title */
 
 .concept-principle-overlay h3 {
   margin: 0;
   padding: 0;
   color: var(--ivory-100);
-  font-size: 21px;
+  font-size: 19px;
   line-height: 1.3;
   font-weight: 600;
 }
-
-
-/* ============================================================
-   PRINCIPLE 05
-   Same width and same ratio as the cards above.
-   Centered on the third row.
-   ============================================================ */
 
 .concept-principle-card--05 {
   grid-column: 1 / -1;
@@ -915,16 +881,20 @@ h1,h2,h3,h4{
   justify-self: center;
 }
 
+@media (max-width: 900px) {
 
-/* ============================================================
-   TABLET
-   ============================================================ */
+  .concept-principles-grid {
+    max-width: 680px;
+  }
+
+}
 
 @media (max-width: 720px) {
 
   .concept-principles-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 18px;
+    max-width: 100%;
   }
 
   .concept-principle-card,
@@ -939,16 +909,15 @@ h1,h2,h3,h4{
     bottom: 18px;
   }
 
+  .concept-principle-number {
+    font-size: 11px;
+  }
+
   .concept-principle-overlay h3 {
-    font-size: 19px;
+    font-size: 18px;
   }
 
 }
-
-
-/* ============================================================
-   SMALL MOBILE
-   ============================================================ */
 
 @media (max-width: 420px) {
 
@@ -959,11 +928,11 @@ h1,h2,h3,h4{
   }
 
   .concept-principle-number {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .concept-principle-overlay h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
 }
