@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Câu hỏi thường gặp | VERDÉA HOTEL</title>
+<meta name="description" content="Tìm hiểu câu trả lời cho những câu hỏi thường gặp về VERDÉA HOTEL - Ốc đảo xanh giữa lòng TP. Hồ Chí Minh.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+  .faq-section {
+    margin-bottom: 80px;
+  }
+
+  .faq-category-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--forest-900);
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gold-600);
+    font-family: var(--font-serif);
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--ivory-300);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .faq-item:hover {
+    border-color: var(--gold-600);
+    box-shadow: 0 8px 24px -12px rgba(30, 42, 28, 0.25);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 28px;
+    cursor: pointer;
+    background: var(--white);
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 15.5px;
+    font-weight: 500;
+    color: var(--forest-900);
+    transition: var(--transition);
+  }
+
+  .faq-item.active .faq-question {
+    background: var(--ivory-200);
+    color: var(--forest-900);
+  }
+
+  .faq-question:hover {
+    color: var(--gold-600);
+  }
+
+  .faq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-left: 16px;
+    font-size: 18px;
+    transition: transform var(--transition);
+    color: var(--gold-600);
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 0 28px 0 28px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition);
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+    padding: 0 28px 24px 28px;
+    max-height: 1000px;
+  }
+
+  .faq-answer p {
+    color: var(--ink-600);
+    font-size: 14.5px;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .faq-answer ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--ink-600);
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+
+  .faq-answer ul li {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 720px) {
+    .faq-category-title {
+      font-size: 19px;
+      margin-bottom: 24px;
+    }
+
+    .faq-question {
+      padding: 18px 20px;
+      font-size: 14.5px;
+    }
+
+    .faq-answer {
+      padding: 0 20px 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 20px 18px 20px;
+    }
+
+    .faq-section {
+      margin-bottom: 56px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index.html" class="logo">VERDÉA<span>HOTEL &middot; SÀI GÒN</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Trang chủ</a></li>
+          <li><a href="about.html">Concept</a></li>
+          <li><a href="rooms.html">Phòng & Suite</a></li>
+          <li><a href="dining.html">Ẩm thực</a></li>
+          <li><a href="wellness.html">Wellness</a></li>
+          <li><a href="events.html">Sự kiện</a></li>
+          <li><a href="workshop.html">Workshop</a></li>
+          <li><a href="contact.html">Liên hệ</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact.html" class="btn btn-primary">Đặt phòng</a>
+      </div>
+      <button class="nav-toggle" aria-label="Mở menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero hero--short" style="background-image:url('assets/img/lobby.jpg');">
+    <div class="container hero-inner">
+      <h1>Câu hỏi<br>thường gặp</h1>
+      <p>Tìm hiểu thêm về VERDÉA HOTEL, các dịch vụ, tiện ích và những trải nghiệm đặc biệt.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- VỊ TRÍ & CONCEPT -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Vị trí & Concept</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Vị trí của VERDÉA HOTEL ở đâu?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL tọa lạc tại <strong>215A Nguyễn Văn Hưởng, Phường Thảo Điền, TP. Hồ Chí Minh</strong>. Vị trí này được chọn lọc kỹ càng vì nằm trong một khu vực yên tĩnh, xanh mát, đặc biệt phù hợp với triết lý thiết kế của chúng tôi.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Điều gì khiến VERDÉA HOTEL khác biệt với các khách sạn khác?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL khác biệt nhờ không gian mở phủ mảng xanh và vật liệu tự nhiên, tận dụng tối đa ánh sáng cùng luồng gió trời để tạo nên một "chốn bình yên" thư thái ngay lòng đô thị. Chúng tôi không chỉ cung cấp lưu trú, mà tạo ra một trải nghiệm toàn diện giúp bạn chậm lại, kết nối với thiên nhiên và tái tạo năng lượng.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Khái niệm "A Sanctuary Within Nature" của VERDÉA HOTEL có ý nghĩa gì?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Khái niệm này phản ánh triết lý lõi của chúng tôi: tạo ra một khu trú ẩn từ những áp lực của cuộc sống thành thị, nơi thiên nhiên được tích hợp vào mọi chi tiết kiến trúc và nội thất. VERDÉA HOTEL là nơi bạn có thể thở được không khí sạch, nghe tiếng nước chảy và cây xạo, và cảm nhận sự bình yên của thiên nhiên, mặc dù vẫn nằm trong lòng thành phố sôi động.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL sử dụng ánh sáng tự nhiên và thông gió như thế n��o?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Thiết kế của chúng tôi tận dụng tối đa ánh sáng tự nhiên thông qua:</p>
+              <ul>
+                <li>Hệ thống vách kính rộng mở giúp ánh sáng tuyến tính chiếu vào các không gian chung</li>
+                <li>Thiết kế mở cho phép luồng gió đối lưu tự nhiên di chuyển qua toàn bộ khách sạn</li>
+                <li>Tường cây đứng và tiểu cảnh nước giúp điều hòa nhiệt độ tự nhiên</li>
+                <li>Kết quả: giảm đáng kể tiêu thụ điện năng cho hệ thống chiếu sáng và làm mát</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Thiên nhiên được tích hợp vào kiến trúc và nội thất của VERDÉA HOTEL như thế nào?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Thiên nhiên là ngôn ngữ thiết kế chính của chúng tôi, được phản ánh qua năm nguyên tắc:</p>
+              <ul>
+                <li><strong>Hòa nhập thiên nhiên:</strong> Tích hợp mảng xanh bao phủ, tường cây đứng và hệ thống tiểu cảnh nước</li>
+                <li><strong>Vật liệu tự nhiên:</strong> Ưu tiên gỗ, đá và các vật liệu bền vững</li>
+                <li><strong>Ánh sáng & không khí:</strong> Tận dụng tối đa thiết kế mở và luồng gió tự nhiên</li>
+                <li><strong>Hình khối hữu cơ:</strong> Mô phỏng các đường nét tự nhiên, giảm bớt góc cạnh bê tông cứng nhắc</li>
+                <li><strong>Thiết kế đa giác quan:</strong> Kết hợp ánh sáng, âm thanh nước và hương thơm cây cỏ</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PHÒNG & LƯU TRÚ -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Phòng & Lưu trú</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có những hạng phòng nào?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL phục vụ năm hạng phòng, mỗi không gian là một cách diễn giải riêng của sự tĩnh tại và tiện nghi hiện đại:</p>
+              <ul>
+                <li><strong>Standard Room (32 m²):</strong> Không gian ấm cúng với tông màu trung tính và mảng xanh điểm nhấn</li>
+                <li><strong>Deluxe Room:</strong> Nâng cấp tinh tế với tiện nghi vượt trội</li>
+                <li><strong>Premier Room (48 m²):</strong> Tầm nhìn thoáng đãng ra thành phố, nội thất gỗ ấm và ban công riêng</li>
+                <li><strong>Suite Room:</strong> Không gian sang trọng cho những kỳ nghỉ đặc biệt</li>
+                <li><strong>Suite Pool (72 m²):</strong> Hồ bơi riêng giữa không gian xanh mát, dành cho những kỳ nghỉ trọn vẹn nhất</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có phòng phù hợp cho gia đình không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL cung cấp các hạng phòng rộng rãi như Premier Room và Suite Pod Pool rất phù hợp cho các gia đình. Những phòng này có không gian sinh hoạt thoải mái, tiện nghi đầy đủ và an toàn cho trẻ em. Chúng tôi cũng cung cấp các dịch vụ bổ sung như cơi em bé, giường phụ và các tiện ích gia đình khác.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có phòng nối cửa cho gia đình hoặc nhóm không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. Chúng tôi cung cấp dịch vụ phòng nối cửa (connecting rooms) cho các gia đình lớn hoặc nhóm du khách. Dịch vụ này phải được yêu cầu trước khi đặt phòng và sẽ được xác nhận tùy theo tình trạng phòng trống. Vui lòng liên hệ với đội ngũ phòng ban để sắp xếp.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ẨM THỰC -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Ẩm thực</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có những lựa chọn ẩm thực nào?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL có 2 nhà hàng và các điểm ẩm thực nổi bật:</p>
+              <ul>
+                <li><strong>Nhà hàng All-Day Dining:</strong> Phục vụ các bữa ăn chính trong ngày với thực đơn đa dạng</li>
+                <li><strong>Nhà hàng Specialty:</strong> Mang đến trải nghiệm ẩm thực tuyên chọn vào buổi tối</li>
+                <li><strong>Bar trên tầng thượng:</strong> Quầy bar với tầm nhìn toàn cảnh thành phố về đêm, phục vụ các loại thức uống tinh tế</li>
+                <li>Tất cả các nhà hàng sử dụng Botanical Dining - triết lý chọn lọc nguyên liệu theo mùa, kết hợp kỹ thuật chế biến hiện đại với hương vị truyền thống Việt Nam</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Nhà hàng có phục vụ buffet sáng không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. Nhà hàng All-Day Dining phục vụ buffet sáng từ <strong>6:00 - 10:00</strong>. Bữa sáng tại VERDÉA là một trải nghiệm tuyệt vời với các lựa chọn đa dạng từ ẩm thực Việt Nam truyền thống đến quốc tế, tất cả được chuẩn bị tươi ngon mỗi sáng.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WELLNESS & TIỆN ÍCH -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Wellness & Tiện ích</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có trung tâm spa hoặc wellness không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL cung cấp một trung tâm wellness toàn diện với các dịch vụ spa thư giãn, các liệu trình chăm sóc sức khỏe và làm đẹp do những chuyên gia tay nghề cung cấp.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Khách sạn có phòng gym hoặc trung tâm thể dục không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL có phòng gym hiện đại được trang bị đầy đủ với các dụng cụ tập luyện chất lượng cao. Phòng gym mở cửa phục vụ khách hàng từ sáng sớm đến tối muộn, và chúng tôi cung cấp các dịch vụ như huấn luyện viên cá nhân (personal trainer) theo yêu cầu.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có bể bơi không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL có hồ bơi vô cực ngoài trời rộng rãi, được thiết kế để thể hiện triết lý hòa nhập thiên nhiên. Hồ bơi là không gian tuyệt vời để thư giãn, tái tạo năng lượng và tận hưởng khung cảnh yên tĩnh giữa không gian xanh mát của khách sạn.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có cung cấp những tiện ích giải trí nào khác?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Ngoài spa, gym và hồ bơi, VERDÉA HOTEL cung cấp:</p>
+              <ul>
+                <li>Khu game & bida</li>
+                <li>Sân tennis</li>
+                <li>Các workshop trải nghiệm được tổ chức theo từng dịp (Terrarium, cắm hoa hữu cơ, Scent Lab, trà thảo mộc, v.v.)</li>
+                <li>Các không gian chung xanh mát lý tưởng để đọc sách, thảo luận hoặc tĩnh tâm</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SỰ KIỆN & HỘI NGHỊ -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Sự kiện & Hội nghị</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có cung cấp không gian tổ chức hội nghị và sự kiện không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL rất phù hợp cho các sự kiện nhờ sở hữu hệ thống không gian đa dạng gồm:</p>
+              <ul>
+                <li>2 phòng họp thường (meeting rooms)</li>
+                <li>2 phòng họp cấp cao (executive meeting rooms)</li>
+                <li>1 hội trường lớn đa chức năng (grand ballroom)</li>
+                <li>1 khu vực sự kiện linh hoạt có thể chia làm 3 phòng nhỏ hoặc gộp thành 1 phòng lớn</li>
+              </ul>
+              <p>Mỗi không gian được thiết kế với tính linh hoạt cao, trang bị đầy đủ công nghệ hiện đại, và đan xen với không gian xanh mát của khách sạn.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có thể tổ chức đám cưới hoặc các sự kiện riêng tư không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL là địa điểm hoàn hảo để tổ chức đám cưới, tiệc sinh nhật, hoặc các sự kiện riêng tư khác. Chúng tôi cung cấp:</p>
+              <ul>
+                <li>Các không gian ngoài trời yên tĩnh giữa không gian xanh mát</li>
+                <li>Dịch vụ catering toàn diện với đội ngũ đầu bếp tài năng</li>
+                <li>Hỗ trợ lập kế hoạch và tổ chức sự kiện từ đội ngũ chuyên nghiệp</li>
+                <li>Các tùy chọn trang trí và bố trí không gian linh hoạt</li>
+              </ul>
+              <p>Vui lòng liên hệ với đội ngũ Events của chúng tôi để thảo luận chi tiết.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có phù hợp cho doanh nhân và nhân viên công ty không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL là lựa chọn tuyệt vời cho các nhân viên công ty và doanh nhân nhờ:</p>
+              <ul>
+                <li>Không gian hội họp đầy đủ tiện nghi hiện đại</li>
+                <li>Dịch vụ Internet cao tốc và các tiện ích công vụ</li>
+                <li>Không gian chung yên tĩnh thích hợp để làm việc hoặc họp bàn</li>
+                <li>Các dịch vụ wellness giúp thư giãn sau những ngày làm việc căng thẳng</li>
+                <li>Các gói phòng dành cho doanh nhân với giá cạnh tranh</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DỊCH VỤ & GIAO THÔNG -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Dịch vụ & Giao thông</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Khách sạn có cung cấp dịch vụ đỗ xe cho khách không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL trang bị:</p>
+              <ul>
+                <li>Tầng hầm gửi xe hiện đại với hệ thống quản lý tự động</li>
+                <li>Khoảng sân bán nguyệt rộng rãi phía trước lối vào tích hợp đài phun nước</li>
+                <li>Sảnh đón tiện lợi cho xe cá nhân và taxi drop-off</li>
+                <li>Dịch vụ valet parking theo yêu cầu</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>VERDÉA HOTEL có cung cấp dịch vụ đưa đón sân bay không?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Có. VERDÉA HOTEL cung cấp dịch vụ đưa đón sân bay khi có yêu cầu. Vui lòng thông báo cho chúng tôi trước khi đến khách sạn để chúng tôi có thể sắp xếp xe phù hợp. Bạn có thể liên hệ với đội ngũ tiếp tân hoặc dịch vụ khách hàng của chúng tôi để đặt dịch vụ này.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- PHÁT TRIỂN BỀN VỮNG -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Phát triển bền vững</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Những hoạt động phát triển bền vững nào được áp dụng tại VERDÉA HOTEL?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL thực hiện các hoạt động phát triển bền vững thông qua năm nguyên tắc thiết kế lõi:</p>
+              <ul>
+                <li><strong>Hòa nhập thiên nhiên:</strong> Tích hợp mảng xanh bao phủ, tường cây đứng và hệ thống tiểu cảnh nước giúp điều hòa nhiệt độ tự nhiên và giảm hiệu ứng nhiệt đô thị</li>
+                <li><strong>Vật liệu tự nhiên:</strong> Sử dụng ưu tiên gỗ, đá và các vật liệu bền vững, khai thác thân thiện với môi trường, hạn chế vật liệu nhân tạo gây ô nhiễm</li>
+                <li><strong>Ánh sáng & không khí:</strong> Tận dụng tối đa thiết kế mở, vách kính và luồng gió đối lưu tự nhiên, giúp giảm đáng kể điện năng tiêu thụ cho hệ thống chiếu sáng và làm mát</li>
+                <li><strong>Hình khối hữu cơ:</strong> Mô phỏng các đường nét tự nhiên, giảm bớt góc cạnh bê tông cứng nhắc, tối ưu luồng không khí và sự luân chuyển năng lượng trong không gian</li>
+                <li><strong>Thiết kế đa giác quan:</strong> Kết hợp ánh sáng tự nhiên, âm thanh nước chảy và hương thơm cây cỏ để tạo nên môi trường sống lành mạnh, nâng cao sức khỏe thể chất lẫn tinh thần cho du khách</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Tại sao VERDÉA HOTEL được gọi là một "ốc đảo xanh" giữa lòng Sài Gòn?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL được gọi là "ốc đảo xanh" vì chúng tôi đã thành công trong việc tạo ra một môi trường thoát khỏi sự ồn ào và ô nhiễm của thành phố hiện đại. Mỗi khía cạnh của thiết kế của chúng tôi - từ việc tích hợp cây xanh đến việc sử dụng vật liệu tự nhiên, từ thiết kế mở cho luồng gió tự nhiên đến các hình khối hữu cơ - tất cả đều được tập trung vào việc mang lại một môi trường sống bền vững, lành mạnh và hòa bình cho mỗi vị khách.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="tile" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:48px 56px;background:var(--forest-900);border:none;">
+        <div>
+          <h3 style="color:var(--ivory-100);font-size:26px;margin-bottom:8px;">Không tìm thấy câu trả lời?</h3>
+          <p style="color:var(--sage-300);">Hãy liên hệ trực tiếp với đội ngũ của chúng tôi để được hỗ trợ.</p>
+        </div>
+        <a href="contact.html" class="btn btn-primary">Liên hệ ngay</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo">VERDÉA<span>HOTEL &middot; SÀI GÒN</span></a>
+          <p>Một chốn bình yên giữa thiên nhiên - ốc đảo xanh mát giữa lòng đô thị, nơi kiến trúc và cây xanh cùng kể một câu chuyện chậm rãi, tinh tế.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="TikTok">tt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Khám phá</h5>
+          <ul>
+            <li><a href="about.html">Concept & thiết kế</a></li>
+            <li><a href="rooms.html">Phòng & Suite</a></li>
+            <li><a href="dining.html">Ẩm thực</a></li>
+            <li><a href="wellness.html">Wellness</a></li>
+            <li><a href="events.html">Sự kiện</a></li>
+            <li><a href="workshop.html">Workshop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Hỗ trợ</h5>
+          <ul>
+            <li><a href="contact.html">Đặt phòng</a></li>
+            <li><a href="contact.html">Liên hệ</a></li>
+            <li><a href="#">Chính sách đặt phòng</a></li>
+            <li><a href="faq.html">Câu hỏi thường gặp</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Liên hệ</h5>
+          <ul>
+            <li><a href="#">215A Nguyễn Văn Hưởng,<br>Phường Thảo Điền, TP. Hồ Chí Minh</a></li>
+            <li><a href="tel:+842838225588">(+84) 28 3822 5588</a></li>
+            <li><a href="mailto:reservations@verdeahotel.vn">reservations@verdeahotel.vn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDÉA HOTEL. Bảo lưu mọi quyền.</p>
+        <p><a href="#">Điều khoản sử dụng</a> &nbsp;&middot;&nbsp; <a href="#">Chính sách riêng tư</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lang-toggle">
+    <a href="faq-en.html">EN | VN</a>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Đóng tất cả các FAQ khác
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+        });
+        
+        // Mở FAQ hiện tại nếu chưa mở
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
