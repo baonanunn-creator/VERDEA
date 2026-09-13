@@ -82,4 +82,39 @@ document.addEventListener('DOMContentLoaded', function () {
 }
     });
   });
+
+  // ===== Room gallery lightbox =====
+  var lightbox = document.createElement('div');
+  lightbox.className = 'gallery-lightbox';
+  lightbox.innerHTML = '<button class="gallery-lightbox-close" aria-label="Đóng">&times;</button><img src="" alt="">';
+  document.body.appendChild(lightbox);
+
+  var lightboxImg = lightbox.querySelector('img');
+  var closeBtn = lightbox.querySelector('.gallery-lightbox-close');
+
+  function openGalleryLightbox(src, alt) {
+    if (!src) return;
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || '';
+    lightbox.classList.add('open');
+  }
+  function closeGalleryLightbox() {
+    lightbox.classList.remove('open');
+    lightboxImg.src = '';
+  }
+
+  closeBtn.addEventListener('click', closeGalleryLightbox);
+  lightbox.addEventListener('click', function (e) {
+    if (e.target === lightbox) closeGalleryLightbox();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeGalleryLightbox();
+  });
+
+  document.querySelectorAll('.room-gallery-item').forEach(function (item) {
+    item.addEventListener('click', function () {
+      var img = item.querySelector('img');
+      if (img) openGalleryLightbox(img.src, img.alt);
+    });
+  });
 });
