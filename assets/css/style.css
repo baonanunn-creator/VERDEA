@@ -1166,48 +1166,17 @@ h1,h2,h3,h4{
 }
 /* ============================================================
    VERDÉA — FOREST SECTION SPACING
-   Give the green sections more breathing room
+   Compact breathing space
    ============================================================ */
 
 .section--forest {
-  padding-top: 88px;
-  padding-bottom: 78px;
+  padding-top: 60px;
+  padding-bottom: 52px;
 }
-
-
-/* ============================================================
-   FOREST SECTION HEADER
-   Create more space between heading and cards
-   ============================================================ */
 
 .section--forest .section-head {
-  margin-bottom: 54px;
+  margin-bottom: 36px;
 }
-
-
-/* ============================================================
-   EVENTS / WELLNESS CARD GROUP
-   Keep cards away from the green section edges
-   ============================================================ */
-
-.section--forest .grid {
-  margin-bottom: 0;
-}
-
-
-/* ============================================================
-   JOURNEY SECTION
-   Give the 3 journey columns more breathing room
-   ============================================================ */
-
-.section--forest .journey {
-  margin-bottom: 0;
-}
-
-
-/* ============================================================
-   CARD HEIGHT — SLIGHTLY MORE COMPACT
-   ============================================================ */
 
 .section--forest .tile {
   min-height: 210px;
@@ -1221,12 +1190,12 @@ h1,h2,h3,h4{
 @media (max-width: 720px) {
 
   .section--forest {
-    padding-top: 64px;
-    padding-bottom: 58px;
+    padding-top: 44px;
+    padding-bottom: 40px;
   }
 
   .section--forest .section-head {
-    margin-bottom: 38px;
+    margin-bottom: 28px;
   }
 
   .section--forest .tile {
