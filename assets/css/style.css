@@ -1100,17 +1100,22 @@ h1,h2,h3,h4{
   .room-gallery{grid-template-columns:repeat(2,1fr);}
 }
 /* ============================================================
-   VERDÉA — ROOM IMAGE RATIO FIX
-   Standard & Deluxe = same ratio as Premier
-   Ratio: 3 / 2
-   Applied to both rooms.html and rooms-en.html
+   VERDÉA — ROOM LAYOUT & IMAGE RATIO
+   Applied to rooms.html + rooms-en.html
    ============================================================ */
 
-/* ============================================================
-   VERDÉA — ROOM IMAGE RATIO FIX
-   All room images use the same 3:2 ratio
-   Applied to both rooms.html and rooms-en.html
-   ============================================================ */
+.split:has(img[src*="room-standard.jpg"]),
+.split:has(img[src*="room-deluxe.jpg"]),
+.split:has(img[src*="room-premier.jpg"]),
+.split:has(img[src*="room-suite.jpg"]),
+.split:has(img[src*="room-suitepool.jpg"]) {
+  grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+  gap: 56px;
+  align-items: center;
+}
+
+
+/* ALL 5 ROOM IMAGES */
 
 .split img[src*="room-standard.jpg"],
 .split img[src*="room-deluxe.jpg"],
@@ -1122,4 +1127,40 @@ h1,h2,h3,h4{
   height: auto;
   object-fit: cover;
   display: block;
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .split:has(img[src*="room-standard.jpg"]),
+  .split:has(img[src*="room-deluxe.jpg"]),
+  .split:has(img[src*="room-premier.jpg"]),
+  .split:has(img[src*="room-suite.jpg"]),
+  .split:has(img[src*="room-suitepool.jpg"]) {
+    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+    gap: 36px;
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 720px) {
+
+  .split:has(img[src*="room-standard.jpg"]),
+  .split:has(img[src*="room-deluxe.jpg"]),
+  .split:has(img[src*="room-premier.jpg"]),
+  .split:has(img[src*="room-suite.jpg"]),
+  .split:has(img[src*="room-suitepool.jpg"]) {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
 }
