@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frequently Asked Questions | VERDÉA HOTEL</title>
+<meta name="description" content="Find answers to frequently asked questions about VERDÉA HOTEL - A Sanctuary Within Nature in Ho Chi Minh City.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./assets/css/style.css">
+<style>
+  .faq-section {
+    margin-bottom: 80px;
+  }
+
+  .faq-category-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--forest-900);
+    margin-bottom: 36px;
+    padding-bottom: 16px;
+    border-bottom: 2px solid var(--gold-600);
+    font-family: var(--font-serif);
+  }
+
+  .faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .faq-item {
+    background: var(--white);
+    border: 1px solid var(--ivory-300);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: var(--transition);
+  }
+
+  .faq-item:hover {
+    border-color: var(--gold-600);
+    box-shadow: 0 8px 24px -12px rgba(30, 42, 28, 0.25);
+  }
+
+  .faq-question {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 24px 28px;
+    cursor: pointer;
+    background: var(--white);
+    border: none;
+    width: 100%;
+    text-align: left;
+    font-family: var(--font-sans);
+    font-size: 15.5px;
+    font-weight: 500;
+    color: var(--forest-900);
+    transition: var(--transition);
+  }
+
+  .faq-item.active .faq-question {
+    background: var(--ivory-200);
+    color: var(--forest-900);
+  }
+
+  .faq-question:hover {
+    color: var(--gold-600);
+  }
+
+  .faq-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    margin-left: 16px;
+    font-size: 18px;
+    transition: transform var(--transition);
+    color: var(--gold-600);
+  }
+
+  .faq-item.active .faq-icon {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    display: none;
+    padding: 0 28px 0 28px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all var(--transition);
+  }
+
+  .faq-item.active .faq-answer {
+    display: block;
+    padding: 0 28px 24px 28px;
+    max-height: 1000px;
+  }
+
+  .faq-answer p {
+    color: var(--ink-600);
+    font-size: 14.5px;
+    line-height: 1.8;
+    margin: 0;
+  }
+
+  .faq-answer ul {
+    list-style: disc;
+    margin-left: 20px;
+    color: var(--ink-600);
+    font-size: 14.5px;
+    line-height: 1.8;
+  }
+
+  .faq-answer ul li {
+    margin-bottom: 8px;
+  }
+
+  @media (max-width: 720px) {
+    .faq-category-title {
+      font-size: 19px;
+      margin-bottom: 24px;
+    }
+
+    .faq-question {
+      padding: 18px 20px;
+      font-size: 14.5px;
+    }
+
+    .faq-answer {
+      padding: 0 20px 0 20px;
+    }
+
+    .faq-item.active .faq-answer {
+      padding: 0 20px 18px 20px;
+    }
+
+    .faq-section {
+      margin-bottom: 56px;
+    }
+  }
+</style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="index-en.html" class="logo">VERDÉA<span>HOTEL &middot; SAIGON</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index-en.html">Home</a></li>
+          <li><a href="about-en.html">Concept</a></li>
+          <li><a href="rooms-en.html">Rooms & Suites</a></li>
+          <li><a href="dining-en.html">Dining</a></li>
+          <li><a href="wellness-en.html">Wellness</a></li>
+          <li><a href="events-en.html">Events</a></li>
+          <li><a href="workshop-en.html">Workshop</a></li>
+          <li><a href="contact-en.html">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="nav-cta">
+        <a href="contact-en.html" class="btn btn-primary">Book Now</a>
+      </div>
+      <button class="nav-toggle" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <section class="hero hero--short" style="background-image:url('assets/img/lobby.jpg');">
+    <div class="container hero-inner">
+      <h1>Frequently<br>Asked Questions</h1>
+      <p>Discover answers to common questions about VERDÉA HOTEL, our services, amenities and unforgettable experiences.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      
+      <!-- LOCATION & CONCEPT -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Location & Concept</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Where is VERDÉA HOTEL located in Ho Chi Minh City?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL is located at <strong>215A Nguyen Van Huong Street, Thao Dien Ward, Ho Chi Minh City</strong>. This location was carefully selected because it sits in a tranquil, lush area that perfectly aligns with our design philosophy.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What makes VERDÉA HOTEL different from other urban hotels?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL stands out through its open spaces filled with greenery and natural materials, maximizing natural light and airflow to create a peaceful sanctuary in the heart of the bustling city. We don't just provide accommodation—we deliver a holistic experience that helps you slow down, connect with nature, and rejuvenate your spirit.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What does the concept "A Sanctuary Within Nature" mean?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>This concept reflects our core philosophy: creating a refuge from the pressures of urban life, where nature is seamlessly integrated into every architectural and interior design detail. VERDÉA HOTEL is where you can breathe fresh air, hear the sound of flowing water and rustling leaves, and feel nature's peace—all while remaining within the vibrant heart of the city.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How does VERDÉA HOTEL use natural light and ventilation in its design?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Our design maximizes natural light and ventilation through:</p>
+              <ul>
+                <li>Expansive glass walls that allow linear sunlight to flood common areas</li>
+                <li>Open design that enables natural cross-ventilation throughout the hotel</li>
+                <li>Living green walls and water features that naturally regulate temperature</li>
+                <li>Result: Significantly reduced electricity consumption for lighting and cooling systems</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>How is nature integrated into VERDÉA HOTEL's architecture and interior design?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Nature is the primary design language of VERDÉA HOTEL, reflected through five core principles:</p>
+              <ul>
+                <li><strong>Nature Integration:</strong> Integrated green canopies, living walls, and water features</li>
+                <li><strong>Natural Materials:</strong> Prioritizing wood, stone, and sustainable materials</li>
+                <li><strong>Light & Air:</strong> Maximizing open design and natural airflow</li>
+                <li><strong>Organic Forms:</strong> Mimicking natural lines, reducing harsh concrete angles</li>
+                <li><strong>Multisensory Design:</strong> Combining natural light, water sounds, and plant aromas</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ROOMS & ACCOMMODATION -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Rooms & Accommodation</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What room types and suites are available at VERDÉA HOTEL?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL offers five room categories, each a unique interpretation of tranquility and modern comfort:</p>
+              <ul>
+                <li><strong>Standard Room (32 m²):</strong> Cozy space with neutral tones and vibrant green accents</li>
+                <li><strong>Deluxe Room:</strong> Enhanced elegance with superior amenities</li>
+                <li><strong>Premier Room (48 m²):</strong> City views, warm wood furnishings, and private balcony</li>
+                <li><strong>Suite Room:</strong> Luxurious space for special occasions</li>
+                <li><strong>Suite with Private Pool (72 m²):</strong> Your own pool surrounded by lush greenery, perfect for the ultimate escape</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does VERDÉA HOTEL offer family-friendly rooms?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL provides spacious room categories such as Premier Rooms and Suites with Private Pools that are perfect for families. These rooms offer comfortable living spaces, complete amenities, and child-safe features. We also provide additional family services including baby cribs, extra beds, and other family-oriented amenities upon request.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Are connecting rooms available for families or groups?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. We offer connecting rooms (adjoining rooms) for large families and group travelers. This service should be requested when booking and is subject to availability confirmation. Please contact our reservations team to arrange this service in advance.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- DINING -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Dining</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What dining options are available at VERDÉA HOTEL?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL features 2 restaurants and multiple dining venues:</p>
+              <ul>
+                <li><strong>All-Day Dining Restaurant:</strong> Serving varied menus throughout the day</li>
+                <li><strong>Specialty Restaurant:</strong> Offering refined à la carte dining experiences in the evening</li>
+                <li><strong>Rooftop Bar:</strong> Panoramic city views, sophisticated cocktails and beverages</li>
+                <li>All dining venues embrace Botanical Dining—seasonally sourced ingredients combined with modern culinary techniques and traditional Vietnamese flavors</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does the restaurant offer a breakfast buffet?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Our All-Day Dining Restaurant serves breakfast buffet from <strong>6:00 AM - 10:00 AM</strong>. Breakfast at VERDÉA is a wonderful experience featuring diverse options ranging from traditional Vietnamese cuisine to international selections, all freshly prepared daily.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- WELLNESS & AMENITIES -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Wellness & Amenities</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does VERDÉA HOTEL have a spa or wellness centre?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL features a comprehensive wellness centre offering relaxing spa treatments, health and beauty therapies delivered by skilled professionals.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is there a gym or fitness centre at the hotel?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL is equipped with a modern fitness centre featuring state-of-the-art equipment. The gym is open from early morning to late evening and we offer services such as personal training upon request.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does VERDÉA HOTEL have a swimming pool?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL features an expansive infinity pool set in a serene, lush environment. The pool is a perfect space to relax, rejuvenate, and enjoy the peaceful natural surroundings that define the hotel.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What other recreational and wellness amenities does VERDÉA HOTEL offer?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Beyond the spa, gym, and pool, VERDÉA HOTEL provides:</p>
+              <ul>
+                <li>Game room & billiards</li>
+                <li>Tennis court</li>
+                <li>Experiential workshops held throughout the year (Terrarium, Organic Florals, Scent Lab, Herbal Tea, etc.)</li>
+                <li>Peaceful green gathering spaces ideal for reading, conversation, or meditation</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- EVENTS & MEETINGS -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Events & Meetings</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does VERDÉA HOTEL provide meeting and event facilities?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL is an excellent venue for events and meetings with a diverse range of spaces including:</p>
+              <ul>
+                <li>2 standard meeting rooms</li>
+                <li>2 executive meeting rooms</li>
+                <li>1 large multipurpose grand ballroom</li>
+                <li>1 flexible event space that can be divided into 3 smaller rooms or combined into one large space</li>
+              </ul>
+              <p>Each space is designed with flexibility, equipped with modern technology, and complemented by the hotel's lush surroundings.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Can VERDÉA HOTEL host weddings or private events?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL is a perfect venue for weddings, birthday celebrations, and other private events. We provide:</p>
+              <ul>
+                <li>Tranquil outdoor spaces surrounded by lush greenery</li>
+                <li>Comprehensive catering services with our talented culinary team</li>
+                <li>Professional event planning and coordination support</li>
+                <li>Flexible decoration and space arrangement options</li>
+              </ul>
+              <p>Please contact our Events team to discuss your special occasion in detail.</p>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Is VERDÉA HOTEL suitable for business travellers and corporate events?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Absolutely. VERDÉA HOTEL is an excellent choice for business professionals and corporate travellers due to:</p>
+              <ul>
+                <li>Fully equipped meeting spaces with modern facilities</li>
+                <li>High-speed internet and business amenities</li>
+                <li>Peaceful shared spaces suitable for work or strategic discussions</li>
+                <li>Wellness services to relax after demanding workdays</li>
+                <li>Competitive corporate room rates</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SERVICES & TRANSPORTATION -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Services & Transportation</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does the hotel provide parking for guests?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL features:</p>
+              <ul>
+                <li>Modern underground parking with automated management system</li>
+                <li>Spacious semicircular forecourt with water fountain features</li>
+                <li>Convenient reception area for private vehicles and taxi drop-off</li>
+                <li>Valet parking services upon request</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Does VERDÉA HOTEL provide airport transfers or transportation services?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. VERDÉA HOTEL provides airport transfer services upon request. Please notify us in advance of your arrival so we can arrange appropriate transportation. Contact our front desk or customer service team to book this service.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- SUSTAINABILITY -->
+      <div class="faq-section">
+        <h3 class="faq-category-title">Sustainability</h3>
+        <div class="faq-accordion">
+          
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>What sustainability practices are incorporated into VERDÉA HOTEL?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL implements sustainability through five core design principles:</p>
+              <ul>
+                <li><strong>Nature Integration:</strong> Integrated green canopies, living walls, and water features reduce urban heat effect and provide natural temperature regulation</li>
+                <li><strong>Natural Materials:</strong> Prioritizing wood, stone, and sustainably sourced materials while minimizing synthetic, polluting materials</li>
+                <li><strong>Light & Air:</strong> Maximizing open design and natural cross-ventilation to significantly reduce electricity consumption for lighting and cooling</li>
+                <li><strong>Organic Forms:</strong> Mimicking natural lines, reducing rigid concrete angles to optimize airflow and energy distribution</li>
+                <li><strong>Multisensory Design:</strong> Combining natural light, water sounds, and plant aromas to create a healthy living environment that enhances both physical and mental wellbeing</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question">
+              <span>Why is VERDÉA HOTEL described as an "urban sanctuary" in the heart of Saigon?</span>
+              <span class="faq-icon">⌄</span>
+            </button>
+            <div class="faq-answer">
+              <p>VERDÉA HOTEL is called an "urban sanctuary" because we have successfully created an environment that escapes the noise and pollution of modern city life. Every aspect of our design—from integrated greenery to natural materials, from open design enabling natural airflow to organic forms—is focused on delivering a sustainable, healthy, and peaceful living environment for every guest.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+      <div class="tile" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:48px 56px;background:var(--forest-900);border:none;">
+        <div>
+          <h3 style="color:var(--ivory-100);font-size:26px;margin-bottom:8px;">Didn't find your answer?</h3>
+          <p style="color:var(--sage-300);">Contact our team directly for personalized assistance.</p>
+        </div>
+        <a href="contact-en.html" class="btn btn-primary">Get In Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index-en.html" class="logo">VERDÉA<span>HOTEL &middot; SAIGON</span></a>
+          <p>A peaceful sanctuary within nature—a green refuge in the heart of the metropolis, where architecture and nature tell a slow, refined story.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Instagram">ig</a>
+            <a href="#" aria-label="TikTok">tt</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5>Explore</h5>
+          <ul>
+            <li><a href="about-en.html">Concept & Design</a></li>
+            <li><a href="rooms-en.html">Rooms & Suites</a></li>
+            <li><a href="dining-en.html">Dining</a></li>
+            <li><a href="wellness-en.html">Wellness</a></li>
+            <li><a href="events-en.html">Events</a></li>
+            <li><a href="workshop-en.html">Workshop</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Support</h5>
+          <ul>
+            <li><a href="contact-en.html">Book a Room</a></li>
+            <li><a href="contact-en.html">Contact Us</a></li>
+            <li><a href="#">Booking Policy</a></li>
+            <li><a href="faq-en.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <ul>
+            <li><a href="#">215A Nguyen Van Huong,<br>Thao Dien Ward, Ho Chi Minh City</a></li>
+            <li><a href="tel:+842838225588">(+84) 28 3822 5588</a></li>
+            <li><a href="mailto:reservations@verdeahotel.vn">reservations@verdeahotel.vn</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 VERDÉA HOTEL. All rights reserved.</p>
+        <p><a href="#">Terms of Use</a> &nbsp;&middot;&nbsp; <a href="#">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="lang-toggle">
+    <a href="faq.html">EN | VN</a>
+  </div>
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      
+      question.addEventListener('click', () => {
+        const isActive = item.classList.contains('active');
+        
+        // Close all other FAQs
+        faqItems.forEach(otherItem => {
+          otherItem.classList.remove('active');
+        });
+        
+        // Open current FAQ if not already open
+        if (!isActive) {
+          item.classList.add('active');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
