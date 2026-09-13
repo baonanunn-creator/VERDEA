@@ -1099,3 +1099,27 @@ h1,h2,h3,h4{
 @media (max-width:420px){
   .room-gallery{grid-template-columns:repeat(2,1fr);}
 }
+/* ============================================================
+   VERDÉA — ROOM IMAGE RATIO FIX
+   Standard & Deluxe = same ratio as Premier
+   Ratio: 3 / 2
+   Applied to both rooms.html and rooms-en.html
+   ============================================================ */
+
+/* Standard Room */
+.split img[src*="room-standard.jpg"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
+
+/* Deluxe Room */
+.split img[src*="room-deluxe.jpg"] {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  display: block;
+}
