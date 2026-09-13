@@ -1218,14 +1218,12 @@ h1,h2,h3,h4{
 
 }
 /* ============================================================
-   VERDÉA — CENTERED SECTION HEADERS
-   Index + About + Events
+   VERDÉA — SECTION HEADER ALIGNMENT
    ============================================================ */
 
-/* INDEX / ABOUT / EVENTS
-   Keep the heading on one line and perfectly centered */
-
-.verdea-single-line-header {
+/* Index / About / Events — 1 line, centered */
+.verdea-header-vn,
+.verdea-header-en {
   width: 100%;
   max-width: none;
   margin-left: auto;
@@ -1234,58 +1232,34 @@ h1,h2,h3,h4{
   white-space: nowrap;
 }
 
-
-/* ============================================================
-   WELLNESS HEADER
-   Long title → 2 centered lines
-   ============================================================ */
-
-.verdea-wellness-header {
+/* Wellness Vietnamese — 1 line, centered */
+.verdea-wellness-vn {
   width: 100%;
-  max-width: 900px;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* Wellness English — 2 lines, centered */
+.verdea-wellness-en {
+  width: 100%;
+  max-width: 760px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   white-space: normal;
 }
 
-
-/* Keep the wellness heading visually balanced */
-
-.verdea-wellness-header h2 {
-  max-width: 850px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
-
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
-
-@media (max-width: 900px) {
-
-  .verdea-single-line-header {
+/* Mobile */
+@media (max-width: 720px) {
+  .verdea-header-vn,
+  .verdea-header-en,
+  .verdea-wellness-vn,
+  .verdea-wellness-en {
+    width: 100%;
+    max-width: 100%;
     white-space: normal;
   }
-
-  .verdea-wellness-header h2 {
-    max-width: 700px;
-  }
-
-}
-
-
-@media (max-width: 600px) {
-
-  .verdea-single-line-header,
-  .verdea-wellness-header {
-    width: 100%;
-  }
-
-  .verdea-wellness-header h2 {
-    max-width: 100%;
-  }
-
 }
