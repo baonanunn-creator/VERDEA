@@ -7,6 +7,7 @@
 <meta name="description" content="Discover three dining destinations at VERDÉA HOTEL: All Day Dining, the Specialty Restaurant and the Rooftop Bar.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/dining-gallery.css">
 </head>
@@ -105,6 +106,133 @@
     </div>
   </section>
 
+  <section class="section dining-gallery" id="dining-gallery">
+    <div class="container">
+      <div class="section-head center">
+        <span class="eyebrow" style="justify-content:center;">Gallery</span>
+        <h2>Every Course, In Full Colour</h2>
+        <p>Four chapters of VERDÉA's dining story - tap a stack to see every moment in full.</p>
+      </div>
+
+      <div class="gallery-stacks">
+
+        <!-- 01 — All Day Dining -->
+        <button type="button" class="gallery-stack" data-label="All Day Dining"
+          data-images='[
+            {"src":"","alt":"All Day Dining - photo 1"},
+            {"src":"","alt":"All Day Dining - photo 2"},
+            {"src":"","alt":"All Day Dining - photo 3"},
+            {"src":"","alt":"All Day Dining - photo 4"},
+            {"src":"","alt":"All Day Dining - photo 5"},
+            {"src":"","alt":"All Day Dining - photo 6"}
+          ]'>
+          <div class="gallery-stack-photos">
+            <span class="stack-photo" style="--i:0;"></span>
+            <span class="stack-photo" style="--i:1;"></span>
+            <span class="stack-photo" style="--i:2;"></span>
+            <span class="stack-photo" style="--i:3;"></span>
+            <span class="stack-photo" style="--i:4;"></span>
+            <span class="stack-photo" style="--i:5;"></span>
+          </div>
+          <div class="gallery-stack-label">
+            <span class="stack-index">01</span>
+            <h3>All Day Dining</h3>
+          </div>
+          <span class="gallery-stack-hint">View 6 photos &rarr;</span>
+        </button>
+
+        <!-- 02 — Main Course -->
+        <button type="button" class="gallery-stack" data-label="Main Course"
+          data-images='[
+            {"src":"","alt":"Main Course - photo 1"},
+            {"src":"","alt":"Main Course - photo 2"},
+            {"src":"","alt":"Main Course - photo 3"},
+            {"src":"","alt":"Main Course - photo 4"},
+            {"src":"","alt":"Main Course - photo 5"},
+            {"src":"","alt":"Main Course - photo 6"}
+          ]'>
+          <div class="gallery-stack-photos">
+            <span class="stack-photo" style="--i:0;"></span>
+            <span class="stack-photo" style="--i:1;"></span>
+            <span class="stack-photo" style="--i:2;"></span>
+            <span class="stack-photo" style="--i:3;"></span>
+            <span class="stack-photo" style="--i:4;"></span>
+            <span class="stack-photo" style="--i:5;"></span>
+          </div>
+          <div class="gallery-stack-label">
+            <span class="stack-index">02</span>
+            <h3>Main Course</h3>
+          </div>
+          <span class="gallery-stack-hint">View 6 photos &rarr;</span>
+        </button>
+
+        <!-- 03 — Appetisers -->
+        <button type="button" class="gallery-stack" data-label="Appetisers"
+          data-images='[
+            {"src":"","alt":"Appetisers - photo 1"},
+            {"src":"","alt":"Appetisers - photo 2"},
+            {"src":"","alt":"Appetisers - photo 3"},
+            {"src":"","alt":"Appetisers - photo 4"},
+            {"src":"","alt":"Appetisers - photo 5"},
+            {"src":"","alt":"Appetisers - photo 6"}
+          ]'>
+          <div class="gallery-stack-photos">
+            <span class="stack-photo" style="--i:0;"></span>
+            <span class="stack-photo" style="--i:1;"></span>
+            <span class="stack-photo" style="--i:2;"></span>
+            <span class="stack-photo" style="--i:3;"></span>
+            <span class="stack-photo" style="--i:4;"></span>
+            <span class="stack-photo" style="--i:5;"></span>
+          </div>
+          <div class="gallery-stack-label">
+            <span class="stack-index">03</span>
+            <h3>Appetisers</h3>
+          </div>
+          <span class="gallery-stack-hint">View 6 photos &rarr;</span>
+        </button>
+
+        <!-- 04 — Dessert -->
+        <button type="button" class="gallery-stack" data-label="Dessert"
+          data-images='[
+            {"src":"","alt":"Dessert - photo 1"},
+            {"src":"","alt":"Dessert - photo 2"},
+            {"src":"","alt":"Dessert - photo 3"},
+            {"src":"","alt":"Dessert - photo 4"},
+            {"src":"","alt":"Dessert - photo 5"},
+            {"src":"","alt":"Dessert - photo 6"}
+          ]'>
+          <div class="gallery-stack-photos">
+            <span class="stack-photo" style="--i:0;"></span>
+            <span class="stack-photo" style="--i:1;"></span>
+            <span class="stack-photo" style="--i:2;"></span>
+            <span class="stack-photo" style="--i:3;"></span>
+            <span class="stack-photo" style="--i:4;"></span>
+            <span class="stack-photo" style="--i:5;"></span>
+          </div>
+          <div class="gallery-stack-label">
+            <span class="stack-index">04</span>
+            <h3>Dessert</h3>
+          </div>
+          <span class="gallery-stack-hint">View 6 photos &rarr;</span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true">
+    <button type="button" class="lightbox-close" aria-label="Close">&times;</button>
+    <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous photo">&larr;</button>
+    <div class="lightbox-stage">
+      <img src="" alt="" id="lightbox-image">
+      <div class="lightbox-meta">
+        <span id="lightbox-category"></span>
+        <span id="lightbox-count"></span>
+      </div>
+    </div>
+    <button type="button" class="lightbox-nav lightbox-next" aria-label="Next photo">&rarr;</button>
+  </div>
+
   <section class="section" style="padding-top:0;">
     <div class="container">
       <div class="tile" style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px;padding:48px 56px;background:var(--forest-900);border:none;">
@@ -163,12 +291,13 @@
       </div>
     </div>
   </footer>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/dining-gallery.js"></script>
 
-<div class="lang-toggle">
-  <a href="dining-en.html">EN | VN</a>
-</div>
-  
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dining-gallery.js"></script>
+
+  <div class="lang-toggle">
+    <a href="dining.html">VN | EN</a>
+  </div>
+
 </body>
 </html>
