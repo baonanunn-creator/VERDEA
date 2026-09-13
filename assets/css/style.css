@@ -1203,3 +1203,38 @@ h1,h2,h3,h4{
   }
 
 }
+/* ============================================================
+   VERDÉA — EMOTIONAL JOURNEY TITLE
+   Keep "Slow Down · Connect · Recharge" on one line
+   ============================================================ */
+
+.section--forest .section-head h2 {
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   ABOUT PAGE — REDUCE SPACE BEFORE JOURNEY CONTENT
+   ============================================================ */
+
+.section--forest .section-head {
+  margin-bottom: 32px;
+}
+
+
+/* ============================================================
+   MOBILE
+   Allow the title to wrap naturally on smaller screens
+   ============================================================ */
+
+@media (max-width: 720px) {
+
+  .section--forest .section-head h2 {
+    white-space: normal;
+  }
+
+  .section--forest .section-head {
+    margin-bottom: 28px;
+  }
+
+}
