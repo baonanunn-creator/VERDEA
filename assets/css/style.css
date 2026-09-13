@@ -1164,3 +1164,73 @@ h1,h2,h3,h4{
   }
 
 }
+/* ============================================================
+   VERDÉA — FOREST SECTION SPACING
+   Give the green sections more breathing room
+   ============================================================ */
+
+.section--forest {
+  padding-top: 88px;
+  padding-bottom: 78px;
+}
+
+
+/* ============================================================
+   FOREST SECTION HEADER
+   Create more space between heading and cards
+   ============================================================ */
+
+.section--forest .section-head {
+  margin-bottom: 54px;
+}
+
+
+/* ============================================================
+   EVENTS / WELLNESS CARD GROUP
+   Keep cards away from the green section edges
+   ============================================================ */
+
+.section--forest .grid {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   JOURNEY SECTION
+   Give the 3 journey columns more breathing room
+   ============================================================ */
+
+.section--forest .journey {
+  margin-bottom: 0;
+}
+
+
+/* ============================================================
+   CARD HEIGHT — SLIGHTLY MORE COMPACT
+   ============================================================ */
+
+.section--forest .tile {
+  min-height: 210px;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 720px) {
+
+  .section--forest {
+    padding-top: 64px;
+    padding-bottom: 58px;
+  }
+
+  .section--forest .section-head {
+    margin-bottom: 38px;
+  }
+
+  .section--forest .tile {
+    min-height: auto;
+  }
+
+}
