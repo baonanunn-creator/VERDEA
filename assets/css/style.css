@@ -1106,20 +1106,20 @@ h1,h2,h3,h4{
    Applied to both rooms.html and rooms-en.html
    ============================================================ */
 
-/* Standard Room */
-.split img[src*="room-standard.jpg"] {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 3 / 2;
-  object-fit: cover;
-  display: block;
-}
+/* ============================================================
+   VERDÉA — ROOM IMAGE RATIO FIX
+   All room images use the same 3:2 ratio
+   Applied to both rooms.html and rooms-en.html
+   ============================================================ */
 
-/* Deluxe Room */
-.split img[src*="room-deluxe.jpg"] {
+.split img[src*="room-standard.jpg"],
+.split img[src*="room-deluxe.jpg"],
+.split img[src*="room-premier.jpg"],
+.split img[src*="room-suite.jpg"],
+.split img[src*="room-suitepool.jpg"] {
   width: 100%;
-  height: auto;
   aspect-ratio: 3 / 2;
+  height: auto;
   object-fit: cover;
   display: block;
 }
