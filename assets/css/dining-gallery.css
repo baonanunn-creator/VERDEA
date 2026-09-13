@@ -1,0 +1,200 @@
+/* ============================================================
+   VERDÉA — DINING GALLERY ("Thư viện ẩm thực" / "Botanical Gallery")
+   4 chồng ảnh theo từng chuyên mục ẩm thực (mỗi mục 6 ảnh).
+   - Hover / focus : các ảnh trong chồng xoè ra hé lộ góc ảnh phía sau.
+   - Click        : mở lightbox xem toàn bộ 6 ảnh của mục đó, có thể
+                     bấm để đi tới ảnh kế tiếp; hết ảnh sẽ tự đóng lại.
+   Dùng chung cho dining.html và dining-en.html.
+   ============================================================ */
+
+.dining-gallery{
+  background:var(--ivory-100);
+}
+
+.gallery-stacks{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:52px 32px;
+}
+
+/* ---------- Khối 1 chồng ảnh (1 chuyên mục) ---------- */
+.gallery-stack{
+  appearance:none;
+  border:none;
+  background:none;
+  padding:0;
+  cursor:pointer;
+  font-family:var(--font-sans);
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+  color:inherit;
+}
+
+.gallery-stack-photos{
+  position:relative;
+  aspect-ratio:3/4;
+  width:100%;
+}
+
+/* Mỗi ảnh trong chồng — hiện đang để TRỐNG (chưa có ảnh thật),
+   sẽ được người phụ trách hình ảnh gắn thêm background-image sau. */
+.stack-photo{
+  position:absolute;
+  inset:0;
+  border-radius:var(--radius);
+  background-color:var(--ivory-200);
+  background-image:linear-gradient(135deg, var(--ivory-300) 0%, var(--ivory-200) 100%);
+  background-size:cover;
+  background-position:center;
+  border:1px solid var(--ivory-300);
+  box-shadow:var(--shadow-soft);
+  transform:
+    rotate(calc(var(--i) * 2.2deg - 5.5deg))
+    translate(calc(var(--i) * 3px), calc(var(--i) * -3px));
+  transition:transform 0.5s cubic-bezier(.4,0,.2,1);
+  z-index:calc(6 - var(--i));
+}
+
+/* Hoạ tiết chìm để khối ảnh trống vẫn trông có chủ đích,
+   sẽ tự động bị ảnh thật che phủ khi được thêm vào */
+.stack-photo::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  background-image:repeating-linear-gradient(
+    45deg,
+    rgba(169,130,76,0.09) 0px,
+    rgba(169,130,76,0.09) 1px,
+    transparent 1px,
+    transparent 14px
+  );
+}
+
+.gallery-stack:hover .stack-photo,
+.gallery-stack:focus-visible .stack-photo{
+  transform:
+    rotate(calc(var(--i) * 9deg - 22.5deg))
+    translate(calc(var(--i) * 15px - 37px), calc(var(--i) * -9px + 22px));
+}
+
+.gallery-stack-label{
+  display:flex;
+  align-items:baseline;
+  gap:14px;
+}
+.gallery-stack-label .stack-index{
+  font-family:var(--font-serif);
+  font-size:13px;
+  letter-spacing:0.14em;
+  color:var(--gold-600);
+}
+.gallery-stack-label h3{
+  font-size:19px;
+  margin:0;
+}
+.gallery-stack-hint{
+  font-size:11.5px;
+  letter-spacing:0.12em;
+  text-transform:uppercase;
+  color:var(--ink-400);
+}
+
+/* ---------- Lightbox (xem toàn bộ ảnh của 1 chuyên mục) ---------- */
+.gallery-lightbox{
+  position:fixed;
+  inset:0;
+  z-index:10000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:rgba(30,42,28,0.94);
+  opacity:0;
+  visibility:hidden;
+  transition:opacity 0.35s ease;
+  padding:40px;
+}
+.gallery-lightbox.is-open{
+  opacity:1;
+  visibility:visible;
+}
+
+.lightbox-stage{
+  position:relative;
+  max-width:860px;
+  width:100%;
+  text-align:center;
+}
+.lightbox-stage img{
+  max-height:74vh;
+  max-width:100%;
+  margin:0 auto;
+  display:block;
+  border-radius:var(--radius);
+  box-shadow:0 30px 70px -20px rgba(0,0,0,0.6);
+  background:var(--ivory-200);
+  cursor:pointer; /* bấm vào ảnh cũng chuyển sang ảnh kế tiếp */
+}
+.lightbox-meta{
+  margin-top:22px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:14px;
+  color:var(--ivory-200);
+}
+.lightbox-meta #lightbox-category{
+  font-family:var(--font-serif);
+  font-size:15px;
+  letter-spacing:0.04em;
+}
+.lightbox-meta #lightbox-count{
+  font-size:12px;
+  letter-spacing:0.14em;
+  color:var(--gold-400);
+}
+
+.lightbox-close{
+  position:absolute;
+  top:28px;right:32px;
+  background:none;
+  border:1px solid rgba(255,255,255,0.35);
+  width:44px;height:44px;
+  border-radius:50%;
+  color:var(--ivory-100);
+  font-size:22px;
+  line-height:1;
+  cursor:pointer;
+  transition:var(--transition);
+}
+.lightbox-close:hover{border-color:var(--gold-400);color:var(--gold-400);}
+
+.lightbox-nav{
+  background:none;
+  border:1px solid rgba(255,255,255,0.35);
+  width:52px;height:52px;
+  border-radius:50%;
+  color:var(--ivory-100);
+  font-size:20px;
+  cursor:pointer;
+  transition:var(--transition);
+  flex:none;
+  margin:0 18px;
+}
+.lightbox-nav:hover{border-color:var(--gold-400);color:var(--gold-400);}
+.lightbox-nav:disabled{opacity:0.3;cursor:default;}
+.lightbox-nav:disabled:hover{border-color:rgba(255,255,255,0.35);color:var(--ivory-100);}
+
+/* ---------- Responsive ---------- */
+@media (max-width:980px){
+  .gallery-stacks{grid-template-columns:repeat(2,1fr);gap:44px 28px;}
+}
+@media (max-width:720px){
+  .gallery-stacks{grid-template-columns:1fr;gap:40px;max-width:340px;margin:0 auto;}
+  .gallery-lightbox{padding:20px;}
+  .lightbox-nav{width:42px;height:42px;margin:0 8px;font-size:16px;}
+  .lightbox-close{top:16px;right:16px;width:38px;height:38px;font-size:18px;}
+  .lightbox-stage img{max-height:58vh;}
+}
