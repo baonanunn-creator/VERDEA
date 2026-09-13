@@ -1217,3 +1217,75 @@ h1,h2,h3,h4{
   }
 
 }
+/* ============================================================
+   VERDÉA — CENTERED SECTION HEADERS
+   Index + About + Events
+   ============================================================ */
+
+/* INDEX / ABOUT / EVENTS
+   Keep the heading on one line and perfectly centered */
+
+.verdea-single-line-header {
+  width: 100%;
+  max-width: none;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   WELLNESS HEADER
+   Long title → 2 centered lines
+   ============================================================ */
+
+.verdea-wellness-header {
+  width: 100%;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  white-space: normal;
+}
+
+
+/* Keep the wellness heading visually balanced */
+
+.verdea-wellness-header h2 {
+  max-width: 850px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .verdea-single-line-header {
+    white-space: normal;
+  }
+
+  .verdea-wellness-header h2 {
+    max-width: 700px;
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .verdea-single-line-header,
+  .verdea-wellness-header {
+    width: 100%;
+  }
+
+  .verdea-wellness-header h2 {
+    max-width: 100%;
+  }
+
+}
