@@ -186,7 +186,8 @@ h1,h2,h3,h4{
 .nav-links{
   display:flex;
   align-items:center;
-  gap:38px;
+  gap:28px;
+  flex-shrink:1;
 }
 .nav-links a{
   font-size:12.5px;
@@ -197,6 +198,7 @@ h1,h2,h3,h4{
   position:relative;
   padding:6px 0;
   transition:var(--transition);
+  white-space:nowrap;
 }
 .nav-links a::after{
   content:"";
@@ -210,8 +212,14 @@ h1,h2,h3,h4{
 .nav-links a.active::after{width:100%;}
 .nav-links a.active{color:var(--gold-400);}
 
-.nav-cta{margin-left:6px;}
-.nav-cta .btn{padding:12px 26px;}
+.nav-cta{
+  margin-left:0;
+  flex-shrink:0;
+}
+
+.nav-cta .btn{
+  padding:12px 22px;
+}
 
 .nav-toggle{
   display:none;
